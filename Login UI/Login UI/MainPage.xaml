@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Login_UI.CustomRenderer"
+             x:Class="Login_UI.MainPage">
+
+    <StackLayout BackgroundColor="#e6e6e6">
+        <Grid>
+            <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="260" BackgroundColor="HotPink" Padding="0" Margin="0">
+                    <Image Source="mdd.jpeg" Aspect="AspectFill" Margin="0"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Spacing="7" Padding="0" Margin="10,170,10,0" HorizontalOptions="FillAndExpand">
+                <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+
+                    <StackLayout>
+
+
+                        <StackLayout Margin="10">
+                            <Label Text="SIGN IN" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,10">
+
+                            <Frame BackgroundColor="Transparent" 
+                                   BorderColor="DarkGray" Padding="0" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue"
+                                           HeightRequest="40" 
+                                           WidthRequest="40" 
+                                           CornerRadius="30" 
+                                           Padding="0" 
+                                           Margin="5">
+                                        <Image Source="user.png" 
+                                               Aspect="AspectFill" 
+                                               Margin="0"/>
+                                    </Frame>
+
+                                    <local:CustomEntry Placeholder="Email" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,17,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="lock.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <local:CustomEntry Placeholder="Password" IsPassword="True" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <StackLayout Margin="0,8" Orientation="Horizontal">
+                                <CheckBox IsChecked="False" Color="HotPink" />
+                                <Label Text="Remember me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+
+
+
+                            </StackLayout>
+                            <StackLayout Margin="0,10">
+
+                                <Button  Text="SIGN IN" BackgroundColor="HotPink" Clicked="Button_Clicked" TextColor="White" CornerRadius="30" />
+                            </StackLayout>
+                            <StackLayout Margin="0,8" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Label Text="Still Not Connected ?" TextColor="DarkGray" FontSize="Small"/>
+
+                                <Label Text="Sign Up" TextColor="Red" FontAttributes="Bold" FontSize="Small">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SignUp_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+
+
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
